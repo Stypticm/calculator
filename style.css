@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    border: 1px solid blue;
+    width: 400px;
+    height: 500px;
+    background: cornsilk;
+}
+
+button {
+    border-radius: 30%;
+}
+
+.window {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.window>input {
+    font-size: 20px;
+}
+
+.first_row,
+.second_row,
+.third_row,
+.fourth_row {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.first_row>button,
+.second_row>button,
+.third_row>button,
+.fourth_row>button {
+    font-size: 30px;
+}
