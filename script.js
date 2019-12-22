@@ -41,55 +41,12 @@ function allButtons(button, number) {
     });
 }
 
-function number1() {
-    allButtons('.number_1', '1');
-};
-number1();
-
-function number2() {
-    allButtons('.number_2', '2');
-};
-number2();
-
-function number3() {
-    allButtons('.number_3', '3');
-};
-number3();
-
-function number4() {
-    allButtons('.number_4', '4');
-};
-number4();
-
-function number5() {
-    allButtons('.number_5', '5');
-};
-number5();
-
-function number6() {
-    allButtons('.number_6', '6');
-};
-number6();
-
-function number7() {
-    allButtons('.number_7', '7');
-};
-number7();
-
-function number8() {
-    allButtons('.number_8', '8');
-};
-number8();
-
-function number9() {
-    allButtons('.number_9', '9');
-};
-number9();
-
-function number0() {
-    allButtons('.number_0', '0');
-};
-number0();
+function numbers() {
+    for (let i = 0; i < 10; i++) {
+        allButtons(`.number_${i}`,`${i}`)
+    }
+}
+numbers();
 
 // Очистка экрана
 function clearWindow() {
