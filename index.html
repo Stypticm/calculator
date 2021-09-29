@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-    <div class='form_calculator'>
-        <div class='window'>
-            <input class="windowInput" placeholder="Что вам посчитать" value="">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <body>
+    <div class="main_window">
+      <div class="form_calculator">
+        <div class="field_result">
+          <input class="field_for_input" placeholder="what do you want to calculate" value="" />
         </div>
         <br />
-        <div class='buttons'>
-            <div class="first_row">
-                <a class="number_7">7</a>
-                <a class="number_8">8</a>
-                <a class="number_9">9</a>
-                <a class="sum">+</a>
-            </div>
-            <div class="second_row">
-                <a class="number_4">4</a>
-                <a class="number_5">5</a>
-                <a class="number_6">6</a>
-                <a class="sub">-</a>
-            </div>
-            <div class="third_row">
-                <a class="number_1">1</a>
-                <a class="number_2">2</a>
-                <a class="number_3">3</a>
-                <a class="multi">x</a>
-            </div>
-            <div class="fourth_row">
-                <a class="result">=</a>
-                <a class="number_0">0</a>
-                <a class="clear">Очистить</a>
-                <a class="div">/</a>
-            </div>
+        <div class="all_buttons">
+          <div class="rows btn-group d-flex" role="group">
+            <button type="button" class="btn btn-primary btn-lg border btnSeven">7</button>
+            <button type="button" class="btn btn-primary btn-lg border btnEight">8</button>
+            <button type="button" class="btn btn-primary btn-lg border btnNine">9</button>
+            <button type="button" class="btn btn-primary btn-lg border btnPlus">+</button>
+          </div>
+          <div class="rows btn-group d-flex" role="group">
+            <button type="button" class="btn btn-primary btn-lg border">4</button>
+            <button type="button" class="btn btn-primary btn-lg border">5</button>
+            <button type="button" class="btn btn-primary btn-lg border">6</button>
+            <button type="button" class="btn btn-primary btn-lg border">-</button>
+          </div>
+          <div class="rows btn-group d-flex" role="group">
+            <button type="button" class="btn btn-primary btn-lg border">1</button>
+            <button type="button" class="btn btn-primary btn-lg border">2</button>
+            <button type="button" class="btn btn-primary btn-lg border">3</button>
+            <button type="button" class="btn btn-primary btn-lg border">x</button>
+          </div>
+          <div class="rows btn-group d-flex" role="group">
+            <button type="button" class="btn btn-primary btn-lg border">=</button>
+            <button type="button" class="btn btn-primary btn-lg border">0</button>
+            <button type="button" class="btn btn-primary btn-lg border">clear</button>
+            <button type="button" class="btn btn-primary btn-lg border">/</button>
+          </div>
         </div>
+      </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
