@@ -2,6 +2,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(159, 159, 159);
 }
 
 .main_window {

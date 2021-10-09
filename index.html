@@ -11,38 +11,38 @@
     <div class="main_window">
       <div class="form_calculator">
         <div class="field_result">
-          <input class="field_for_input" placeholder="what do you want to calculate" value="" />
+          <input class="field_for_input" placeholder="0" onchange="fieldInput()"/>
         </div>
         <br />
         <div class="all_buttons">
           <div class="rows btn-group d-flex" role="group">
-            <button type="button" class="btn btn-primary btn-lg border btnSeven">7</button>
-            <button type="button" class="btn btn-primary btn-lg border btnEight">8</button>
-            <button type="button" class="btn btn-primary btn-lg border btnNine">9</button>
-            <button type="button" class="btn btn-primary btn-lg border btnPlus">+</button>
+            <button type="button" class="btn btn-primary btn-lg border numberBtn">7</button>
+            <button type="button" class="btn btn-primary btn-lg border numberBtn">8</button>
+            <button type="button" class="btn btn-primary btn-lg border numberBtn">9</button>
+            <button type="button" class="btn btn-primary btn-lg border symbolBtn">+</button>
           </div>
           <div class="rows btn-group d-flex" role="group">
-            <button type="button" class="btn btn-primary btn-lg border">4</button>
-            <button type="button" class="btn btn-primary btn-lg border">5</button>
-            <button type="button" class="btn btn-primary btn-lg border">6</button>
-            <button type="button" class="btn btn-primary btn-lg border">-</button>
+            <button type="button" class="btn btn-primary btn-lg border numberBtn">4</button>
+            <button type="button" class="btn btn-primary btn-lg border numberBtn">5</button>
+            <button type="button" class="btn btn-primary btn-lg border numberBtn">6</button>
+            <button type="button" class="btn btn-primary btn-lg border symbolBtn">-</button>
           </div>
           <div class="rows btn-group d-flex" role="group">
-            <button type="button" class="btn btn-primary btn-lg border">1</button>
-            <button type="button" class="btn btn-primary btn-lg border">2</button>
-            <button type="button" class="btn btn-primary btn-lg border">3</button>
-            <button type="button" class="btn btn-primary btn-lg border">x</button>
+            <button type="button" class="btn btn-primary btn-lg border numberBtn">1</button>
+            <button type="button" class="btn btn-primary btn-lg border numberBtn">2</button>
+            <button type="button" class="btn btn-primary btn-lg border numberBtn">3</button>
+            <button type="button" class="btn btn-primary btn-lg border symbolBtn">*</button>
           </div>
           <div class="rows btn-group d-flex" role="group">
-            <button type="button" class="btn btn-primary btn-lg border">=</button>
-            <button type="button" class="btn btn-primary btn-lg border">0</button>
-            <button type="button" class="btn btn-primary btn-lg border">clear</button>
-            <button type="button" class="btn btn-primary btn-lg border">/</button>
+            <button type="button" class="btn btn-primary btn-lg border resultBtn">=</button>
+            <button type="button" class="btn btn-primary btn-lg border numberBtn">0</button>
+            <button type="button" class="btn btn-primary btn-lg border clearBtn">clear</button>
+            <button type="button" class="btn btn-primary btn-lg border symbolBtn">/</button>
           </div>
         </div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="ts-script.js"></script>
   </body>
 </html>
