@@ -45,47 +45,21 @@ for (var i = 0; i < symbolButton.length; i++) {
 resultButton.addEventListener("click", function (e) {
     secondNumber = Number(fieldInput.value);
     firstNumber = Number(firstNumber);
-    switch (symbol) {
-        case "+":
-            fieldInput.value = firstNumber + secondNumber;
-            for (var i = 0; i < numberButton.length; i++) {
-                numberButton[i].disabled = true;
-            }
-            for (var i = 0; i < symbolButton.length; i++) {
-                symbolButton[i].disabled = true;
-            }
-            resultButton.disabled = true;
-            break;
-        case "-":
-            fieldInput.value = firstNumber - secondNumber;
-            for (var i = 0; i < numberButton.length; i++) {
-                numberButton[i].disabled = true;
-            }
-            for (var i = 0; i < symbolButton.length; i++) {
-                symbolButton[i].disabled = true;
-            }
-            break;
-        case "/":
-            fieldInput.value = firstNumber / secondNumber;
-            for (var i = 0; i < numberButton.length; i++) {
-                numberButton[i].disabled = true;
-            }
-            for (var i = 0; i < symbolButton.length; i++) {
-                symbolButton[i].disabled = true;
-            }
-            break;
-        case "*":
-            fieldInput.value = firstNumber * secondNumber;
-            for (var i = 0; i < numberButton.length; i++) {
-                numberButton[i].disabled = true;
-            }
-            for (var i = 0; i < symbolButton.length; i++) {
-                symbolButton[i].disabled = true;
-            }
-            break;
-        default:
-            break;
-    }
+    var actions = new Map()
+        .set("+", firstNumber + secondNumber)
+        .set("-", firstNumber - secondNumber)
+        .set("/", firstNumber / secondNumber)
+        .set("*", firstNumber * secondNumber);
+    (function disbledNumberSymbol() {
+        for (var i = 0; i < numberButton.length; i++) {
+            numberButton[i].disabled = true;
+        }
+        for (var i = 0; i < symbolButton.length; i++) {
+            symbolButton[i].disabled = true;
+        }
+        resultButton.disabled = true;
+    })();
+    return (fieldInput.value = actions.get(symbol));
 });
 clearButton.addEventListener("click", function (e) {
     fieldInput.value = "";

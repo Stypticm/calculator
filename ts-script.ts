@@ -43,52 +43,23 @@ resultButton.addEventListener("click", (e: Event) => {
   secondNumber = Number(fieldInput.value);
   firstNumber = Number(firstNumber);
 
-  switch (symbol) {
-    case "+":
-      fieldInput.value = firstNumber + secondNumber;
+  const actions = new Map()
+    .set("+", firstNumber + secondNumber)
+    .set("-", firstNumber - secondNumber)
+    .set("/", firstNumber / secondNumber)
+    .set("*", firstNumber * secondNumber);
 
-      for (let i = 0; i < numberButton.length; i++) {
-        numberButton[i].disabled = true;
-      }
-      for (let i = 0; i < symbolButton.length; i++) {
-        symbolButton[i].disabled = true;
-      }
-      resultButton.disabled = true;
-      break;
-    case "-":
-      fieldInput.value = firstNumber - secondNumber;
+  (function disbledNumberSymbol() {
+    for (let i = 0; i < numberButton.length; i++) {
+      numberButton[i].disabled = true;
+    }
+    for (let i = 0; i < symbolButton.length; i++) {
+      symbolButton[i].disabled = true;
+    }
+    resultButton.disabled = true;
+  })();
 
-      for (let i = 0; i < numberButton.length; i++) {
-        numberButton[i].disabled = true;
-      }
-      for (let i = 0; i < symbolButton.length; i++) {
-        symbolButton[i].disabled = true;
-      }
-      break;
-    case "/":
-      fieldInput.value = firstNumber / secondNumber;
-
-      for (let i = 0; i < numberButton.length; i++) {
-        numberButton[i].disabled = true;
-      }
-      for (let i = 0; i < symbolButton.length; i++) {
-        symbolButton[i].disabled = true;
-      }
-      break;
-    case "*":
-      fieldInput.value = firstNumber * secondNumber;
-
-      for (let i = 0; i < numberButton.length; i++) {
-        numberButton[i].disabled = true;
-      }
-      for (let i = 0; i < symbolButton.length; i++) {
-        symbolButton[i].disabled = true;
-      }
-      break;
-
-    default:
-      break;
-  }
+  return (fieldInput.value = actions.get(symbol));
 });
 
 clearButton.addEventListener("click", (e: Event) => {
